@@ -58,4 +58,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function assessments()
+    {
+        return $this->hasMany(Assessment::class);
+        // SELECT * FROM assessments WHERE userId = $userId;
+    }
 }
