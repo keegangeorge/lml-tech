@@ -81,9 +81,10 @@ class AssessmentController extends Controller
         // return view('assessments.show', ['assessment' => $assessment]);
     }
 
-    public function edit($id)
+    public function edit(Assessment $assessment)
     {
-        //
+        return view('assessments.edit', ['assessment' => $assessment]);
+        return view('assessments.edit', compact('assessment'));
     }
 
     public function update(Assessment $assessment)
