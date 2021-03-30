@@ -9,9 +9,10 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg px-10 py-14">
 
-                <form action="{{ route('assessments.edit', $assessment->id) }}" method="POST">
+                <form action="{{ route('assessments.update', $assessment->id) }}" method="POST">
                     @csrf
                     @method('PUT')
+                    {{-- <input type="hidden" name="_method" value="PUT"> --}}
 
                     <div>
                         <div class="md:grid md:grid-cols-3 md:gap-6">
@@ -402,7 +403,7 @@
                         </div>
                     </div>
 
-                    @livewire('tasks')
+                    {{-- @livewire('tasks') --}}
 
 
                     <div class="hidden sm:block" aria-hidden="true">

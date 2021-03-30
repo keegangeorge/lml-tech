@@ -84,13 +84,59 @@ class AssessmentController extends Controller
     public function edit(Assessment $assessment)
     {
         return view('assessments.edit', ['assessment' => $assessment]);
-        return view('assessments.edit', compact('assessment'));
+        // return view('assessments.edit', compact('assessment'));
     }
 
     public function update(Assessment $assessment)
     {
-        $assessment->update($this->validateAssessment());
-        return redirect($assessment->path);
+
+        $assessment->user_id = auth()->user()->id;
+
+        $assessment->date = request('date');
+        $assessment->supervisor = request('supervisor');
+        $assessment->weatherConditions = request('weatherConditions');
+        $assessment->workType = request('workType');
+
+        $assessment->update();
+
+
+        $assessment->preWorkChecklist()->update([
+            'ppeInspected' => request('ppeInspected') ? 1 : 0, 'preUseInspections' => request('preUseInspections') ? 1 : 0,
+            'jobSafety' => request('jobSafety') ? 1 : 0,
+            'visualInspections' => request('visualInspections') ? 1 : 0,
+            'updatedAssessment' => request('updatedAssessment') ? 1 : 0,
+            'toolCondition' => request('toolCondition') ? 1 : 0,
+            'controlZones' => request('controlZones') ? 1 : 0
+        ]);
+
+        $assessment->ppe()->update([
+            'boots' => request('boots') ? 1 : 0,
+            'vest' => request('vest') ? 1 : 0,
+            'hat' => request('hat') ? 1 : 0,
+            'glasses' => request('glasses') ? 1 : 0,
+            'gloves' => request('gloves') ? 1 : 0,
+            'harness' => request('harness') ? 1 : 0,
+            'other' => request('otherPPE')
+        ]);
+
+
+        // request()->validate([
+        //     'name' => 'required',
+        //     'introduction' => 'required',
+        //     'location' => 'required',
+        //     'cost' => 'required'
+        // ]);
+        // $assessment->update(request()->all());
+
+        // return redirect()->route('projects.index')
+        //     ->with('success', 'Project updated successfully');
+
+
+
+
+        // $assessment->update($this->validateAssessment());
+        // $assessment->update();
+        return redirect($assessment->path())->with('success', 'Assessment updated successfully');
     }
 
     public function destroy($id)

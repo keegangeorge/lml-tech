@@ -33,7 +33,8 @@
                                                             Date
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
-                                                            <input type="date" name="date" id="date"
+                                                            <input type="date" placeholder="YYYY-MM-DD (Ex. 2021-02-02)"
+                                                                name="date" id="date"
                                                                 class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
                                                         </div>
                                                     </div>
