@@ -10,13 +10,20 @@ class Tasks extends Component
 
     public $addTasks = [];
     public $allTasks = [];
+    public $hasTasks;
 
-    public function mount()
+    public function mount($hasTasks = null)
     {
-        $this->allTasks = Task::all();
-        $this->addTasks = [
-            ['title' => '', 'hazards' => '', 'riskLevel' => 'Low', 'controls' => '']
-        ];
+        // ! TODO: setup finding of current task based on assessment id and add it to the view for the edit path.
+        $this->allTasks = Task::where('assessment_id', 3)->get();
+        // $this->addTasks = ?
+
+        if (!is_null($hasTasks)) {
+            $this->allTasks = Task::all();
+            $this->addTasks = [
+                ['title' => '', 'hazards' => '', 'riskLevel' => 'Low', 'controls' => '']
+            ];
+        }
     }
 
     public function addTask()
