@@ -403,7 +403,7 @@
                         </div>
                     </div>
 
-                    {{-- @livewire('tasks') --}}
+                    @livewire('tasks')
 
 
                     <div class="hidden sm:block" aria-hidden="true">

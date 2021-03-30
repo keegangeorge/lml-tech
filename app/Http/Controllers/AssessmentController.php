@@ -119,6 +119,15 @@ class AssessmentController extends Controller
             'other' => request('otherPPE')
         ]);
 
+        foreach (request()->addTasks as $task) {
+            $assessment->tasks()->update([
+                'title' => $task['title'],
+                'hazards' => $task['hazards'],
+                'riskLevel' => $task['riskLevel'],
+                'controls' => $task['controls']
+            ]);
+        }
+
 
         // request()->validate([
         //     'name' => 'required',
@@ -139,9 +148,12 @@ class AssessmentController extends Controller
         return redirect($assessment->path())->with('success', 'Assessment updated successfully');
     }
 
-    public function destroy($id)
+    public function destroy(Assessment $assessment)
     {
-        //
+        $assessment->delete();
+
+        return redirect()->route('assessments.index')
+            ->with('success', 'Project deleted successfully');
     }
 
     protected function validateAssessment()

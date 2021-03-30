@@ -71,12 +71,19 @@
                                                         <td class="px-6 py-4 text-gray-500">{{ $assessment->workType }}
                                                         </td>
                                                         <td>
-                                                            <a class="p-2 bg-gray-200 font-bold text-gray-400  text-sm text-center uppercase rounded transition-colors hover:bg-gray-400 hover:text-white"
-                                                                href="{{ route('assessments.show', $assessment) }}">View</a>
-                                                            <a class="p-1 font-bold text-gray-400  text-sm text-center uppercase rounded transition-colors hover:text-gray-200"
-                                                                href="{{ route('assessments.edit', $assessment) }}">Edit</a>
-                                                            <a class="p-1 font-bold text-gray-400  text-sm text-center uppercase rounded transition-colors hover:text-gray-200"
-                                                                href="{{ route('assessments.destroy', $assessment) }}">Delete</a>
+                                                            <form
+                                                                action="{{ route('assessments.destroy', $assessment->id) }}"
+                                                                method="POST">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <a class="p-2 bg-gray-200 font-bold text-gray-400  text-sm text-center uppercase rounded transition-colors hover:bg-gray-400 hover:text-white"
+                                                                    href="{{ route('assessments.show', $assessment) }}">View</a>
+                                                                <a class="p-1 font-bold text-gray-400  text-sm text-center uppercase rounded transition-colors hover:text-gray-200"
+                                                                    href="{{ route('assessments.edit', $assessment) }}">Edit</a>
+
+                                                                <button type="submit" title="delete"
+                                                                    class="p-1 font-bold text-gray-400 d-inline text-sm text-center uppercase rounded transition-colors hover:text-gray-200">Delete</button>
+                                                            </form>
                                                         </td>
                                                     </tr>
                                                 @empty
