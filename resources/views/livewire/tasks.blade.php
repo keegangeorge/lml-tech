@@ -16,12 +16,18 @@
                         <div class="col-span-3 sm:col-span-2">
                             <label for="title" class="block text-sm font-medium text-gray-700">
                                 Task Title
+                                @error('title')
+                                    <br>
+                                    <small class="text-red-600">{{ $errors->first('title') }}
+                                    </small>
+
+                                @enderror
                             </label>
 
                             <div class="mt-1 flex rounded-md shadow-sm">
                                 <input type="text" name="addTasks[{{ $index }}][title]"
                                     wire:model="addTasks.{{ $index }}.title"
-                                    class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
+                                    class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300 @error('title') border-red-600 @enderror">
 
                             </div>
 

@@ -23,14 +23,8 @@ class AssessmentController extends Controller
 
     public function store(Request $request)
     {
-        // dump(request()->all());
-        // $this->validateAssessment();
-
-        // $assessment = new Assessment(request([]));
-        // // $assessment->user_id = 2; // why?
-        // $assessment->save();
-
-        // return redirect(route('assessments.index'));
+        // Validate the request
+        $this->validateAssessment();
 
         $assessment = new Assessment();
 
@@ -67,7 +61,7 @@ class AssessmentController extends Controller
                 'title' => $task['title'],
                 'hazards' => $task['hazards'],
                 'riskLevel' => $task['riskLevel'],
-                'controls' => $task['controls']
+                'controls' => $task['controls'],
             ]);
         }
 
@@ -119,32 +113,41 @@ class AssessmentController extends Controller
             'other' => request('otherPPE')
         ]);
 
-        foreach (request()->addTasks as $task) {
-            $assessment->tasks()->update([
-                'title' => $task['title'],
-                'hazards' => $task['hazards'],
-                'riskLevel' => $task['riskLevel'],
-                'controls' => $task['controls']
-            ]);
-        }
 
+        // foreach (request()->addTasks as $task) {
+        //     $assessment->tasks()->update([
+        //         'title' => $task['title'],
+        //         'hazards' => $task['hazards'],
+        //         'riskLevel' => $task['riskLevel'],
+        //         'controls' => $task['controls']
+        //     ]);
+        // }
 
-        // request()->validate([
-        //     'name' => 'required',
-        //     'introduction' => 'required',
-        //     'location' => 'required',
-        //     'cost' => 'required'
-        // ]);
-        // $assessment->update(request()->all());
+        // foreach (request()->addTasks as $task) {
+        //     Task::where('id', 22)->update([
+        //         'title' => $task['title'],
+        //         'hazards' => $task['hazards'],
+        //         'riskLevel' => $task['riskLevel'],
+        //         'controls' => $task['controls']
+        //     ]);
+        // }
 
-        // return redirect()->route('projects.index')
-        //     ->with('success', 'Project updated successfully');
+        // foreach (request()->addTasks as $task) {
+        //     // dump($assessment->tasks()->pluck('id'));
 
+        //     foreach ($assessment->tasks()->pluck('id') as $t) {
+        //         // dump($t);
 
-
-
-        // $assessment->update($this->validateAssessment());
-        // $assessment->update();
+        //         Task::where('id', $t)->update([
+        //             'title' => $task['title'],
+        //             'hazards' => $task['hazards'],
+        //             'riskLevel' => $task['riskLevel'],
+        //             'controls' => $task['controls']
+        //         ]);
+        //     }
+        // }
+        // die();
+        // 
         return redirect($assessment->path())->with('success', 'Assessment updated successfully');
     }
 
@@ -163,6 +166,7 @@ class AssessmentController extends Controller
             'supervisor' => 'required',
             'weatherConditions' => 'required',
             'workType' => 'required',
+            'title' => 'required',
         ]);
     }
 }

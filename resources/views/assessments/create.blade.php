@@ -31,31 +31,75 @@
                                                         <label for="date"
                                                             class="block text-sm font-medium text-gray-700">
                                                             Date
+                                                            @error('date')
+                                                                <br>
+                                                                <small class="text-red-600">{{ $errors->first('date') }}
+                                                                </small>
+
+                                                            @enderror
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
-                                                            <input type="date" placeholder="YYYY-MM-DD (Ex. 2021-02-02)"
-                                                                name="date" id="date"
-                                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
+                                                            <input type="date" value="{{ old('date') }}"
+                                                                placeholder="YYYY-MM-DD (Ex. 2021-02-02)" name="date"
+                                                                id="date" class="focus:ring-indigo-500 
+                                                                focus:border-indigo-500
+                                                                 flex-1 block w-full
+                                                                 rounded-md sm:text-sm
+                                                                 border-gray-300
+                                                                 @error('date')
+                                                                                     border-red-600
+                                                                 @enderror">
                                                         </div>
+
                                                     </div>
 
+                                                    {{-- Supervisor or Manager Name --}}
                                                     <div class="col-span-3 sm:col-span-2">
                                                         <label for="supervisor"
                                                             class="block text-sm font-medium text-gray-700">
                                                             Supervisor or Manager Name
+                                                            @error('supervisor')
+                                                                <br>
+                                                                <small
+                                                                    class="text-red-600">{{ $errors->first('supervisor') }}
+                                                                </small>
+
+                                                            @enderror
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
-                                                            <input type="text" name="supervisor" id="supervisor"
-                                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
+                                                            <input type="text" value="{{ old('supervisor') }}"
+                                                                name="supervisor" id="supervisor" class="focus:ring-indigo-500
+                                                                focus:border-indigo-500
+                                                                 flex-1 block w-full
+                                                                 rounded-md sm:text-sm
+                                                                 border-gray-300
+                                                                 @error('supervisor')
+                                                                                                                                                border-red-600
+                                                                 @enderror">
+
                                                         </div>
                                                     </div>
+                                                    {{-- Weather Conditions --}}
                                                     <div class="col-span-3 sm:col-span-2">
                                                         <label for="weatherConditions"
                                                             class="block text-sm font-medium text-gray-700">Weather
                                                             Conditions</label>
+                                                        @error('weatherConditions')
+                                                            <br>
+                                                            <small
+                                                                class="text-red-600">{{ $errors->first('weatherConditions') }}
+                                                            </small>
+                                                        @enderror
                                                         <select id="weatherConditions" name="weatherConditions"
-                                                            autocomplete="weatherConditions"
-                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                            autocomplete="weatherConditions" value="Rain" class="mt-1 
+                                                            block w-full 
+                                                            py-2 px-3 border 
+                                                            border-gray-300 
+                                                            @error('weatherConditions')
+                                                                                                                border-red-600
+                                                            @enderror 
+                                                            bg-white rounded-md shadow-sm focus:outline-none
+                                                            focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm ">
                                                             <option>Sunny</option>
                                                             <option>Partially Cloudy</option>
                                                             <option>Cloudy</option>
@@ -69,14 +113,29 @@
                                                             <option>Sandstorm</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-span-3 sm:col-span-2">
+                                                    {{-- Type of Work --}}
+                                                    <div class=" col-span-3 sm:col-span-2">
                                                         <label for="workType"
                                                             class="block text-sm font-medium text-gray-700">
                                                             Type of Work
+                                                            @error('workType')
+                                                                <br>
+                                                                <small
+                                                                    class="text-red-600">{{ $errors->first('workType') }}
+                                                                </small>
+
+                                                            @enderror
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
                                                             <input type="text" name="workType" id="workType"
-                                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
+                                                                value="{{ old('workType') }}" class="focus:ring-indigo-500
+                                                                 focus:border-indigo-500
+                                                                  flex-1 block w-full
+                                                                  rounded-md sm:text-sm
+                                                                  border-gray-300
+                                                                  @error('workType')
+                                                                                    border-red-600
+                                                                 @enderror">
                                                         </div>
                                                     </div>
                                                 </div>

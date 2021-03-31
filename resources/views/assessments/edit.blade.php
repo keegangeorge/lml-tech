@@ -403,14 +403,14 @@
                         </div>
                     </div>
 
-                    @livewire('tasks')
+                    {{-- @livewire('tasks', ['hasTasks' => $assessmentid]) --}}
 
 
-                    <div class="hidden sm:block" aria-hidden="true">
+                    {{-- <div class="hidden sm:block" aria-hidden="true">
                         <div class="py-5">
                             <div class="border-t border-gray-200"></div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="mt-5 md:grid-cols-3">
                         <button
