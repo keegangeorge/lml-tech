@@ -13,7 +13,7 @@
 
                 <ul class="md:flex flex-row flex-wrap items-start">
                     <li><a href="{{ route('assessments.index') }}"
-                            class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-indigo-400 hover:bg-indigo-300 rounded ">My
+                            class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-yellow-500 hover:bg-yello-600 rounded ">My
                             Assessments</a></li>
                     <li><a href="{{ route('assessments.create') }}"
                             class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-gray-400 hover:bg-gray-300 rounded ">New

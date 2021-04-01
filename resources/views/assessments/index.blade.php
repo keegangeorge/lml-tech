@@ -11,7 +11,7 @@
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg px-10 py-14">
                         <div class="flex flex-col">
-                            <a class="text-center m-5 p-3 text-white bg-indigo-300 hover:bg-indigo-400 rounded"
+                            <a class="text-center m-5 p-3 text-white bg-yellow-300 hover:bg-yellow-400 rounded"
                                 href="{{ route('assessments.create') }}">New Assessment</a>
                             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">

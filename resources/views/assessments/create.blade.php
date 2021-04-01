@@ -41,13 +41,13 @@
                                                         <div class="mt-1 flex rounded-md shadow-sm">
                                                             <input type="date" value="{{ old('date') }}"
                                                                 placeholder="YYYY-MM-DD (Ex. 2021-02-02)" name="date"
-                                                                id="date" class="focus:ring-indigo-500 
-                                                                focus:border-indigo-500
+                                                                id="date" class="focus:ring-yellow-500 
+                                                                focus:border-yellow-500
                                                                  flex-1 block w-full
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('date')
-                                                                                                     border-red-600
+                                                                                                                                     border-red-600
                                                                  @enderror">
                                                         </div>
 
@@ -68,13 +68,13 @@
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
                                                             <input type="text" value="{{ old('supervisor') }}"
-                                                                name="supervisor" id="supervisor" class="focus:ring-indigo-500
-                                                                focus:border-indigo-500
+                                                                name="supervisor" id="supervisor" class="focus:ring-yellow-500
+                                                                focus:border-yellow-500
                                                                  flex-1 block w-full
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('supervisor')
-                                                                                                                                                                border-red-600
+                                                                                                                                                                                                border-red-600
                                                                  @enderror">
 
                                                         </div>
@@ -96,10 +96,10 @@
                                                             py-2 px-3 border 
                                                             border-gray-300 
                                                             @error('weatherConditions')
-                                                                                                                                border-red-600
+                                                                                                                                                                border-red-600
                                                             @enderror 
                                                             bg-white rounded-md shadow-sm focus:outline-none
-                                                            focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm ">
+                                                            focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm ">
                                                             <option selected>{{ old('weatherConditions') }}</option>
                                                             <option>Sunny</option>
                                                             <option>Partially Cloudy</option>
@@ -126,13 +126,13 @@
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
                                                             <input type="text" name="workType" id="workType"
-                                                                value="{{ old('workType') }}" class="focus:ring-indigo-500
-                                                                 focus:border-indigo-500
+                                                                value="{{ old('workType') }}" class="focus:ring-yellow-500
+                                                                 focus:border-yellow-500
                                                                   flex-1 block w-full
                                                                   rounded-md sm:text-sm
                                                                   border-gray-300
                                                                   @error('workType')
-                                                                                                    border-red-600
+                                                                                                                                    border-red-600
                                                                  @enderror">
                                                         </div>
                                                     </div>
@@ -172,7 +172,7 @@
                                                             <div class="flex items-center h-5">
                                                                 <input id="ppeInspected" name="ppeInspected"
                                                                     type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="ppeInspected"
@@ -184,7 +184,7 @@
                                                             <div class="flex items-center h-5">
                                                                 <input id="preUseInspections" name="preUseInspections"
                                                                     type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="preUseInspections"
@@ -195,7 +195,7 @@
                                                         <div class="flex items-start">
                                                             <div class="flex items-center h-5">
                                                                 <input id="jobSafety" name="jobSafety" type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="jobSafety"
@@ -207,7 +207,7 @@
                                                             <div class="flex items-center h-5">
                                                                 <input id="visualInspections" name="visualInspections"
                                                                     type="checkbox" value="1"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="visualInspections"
@@ -220,7 +220,7 @@
                                                             <div class="flex items-center h-5">
                                                                 <input id="updatedAssessment" name="updatedAssessment"
                                                                     type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="updatedAssessment"
@@ -233,7 +233,7 @@
                                                             <div class="flex items-center h-5">
                                                                 <input id="toolCondition" name="toolCondition"
                                                                     type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="toolCondition"
@@ -245,7 +245,7 @@
                                                             <div class="flex items-center h-5">
                                                                 <input id="controlZones" name="controlZones"
                                                                     type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="controlZones"
@@ -287,7 +287,7 @@
                                                         <div class="flex items-start">
                                                             <div class="flex items-center h-5">
                                                                 <input id="boots" name="boots" type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="boots"
@@ -298,7 +298,7 @@
                                                         <div class="flex items-start">
                                                             <div class="flex items-center h-5">
                                                                 <input id="vest" name="vest" type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="vest"
@@ -309,7 +309,7 @@
                                                         <div class="flex items-start">
                                                             <div class="flex items-center h-5">
                                                                 <input id="hat" name="hat" type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="hat" class="font-medium text-gray-700">Hard
@@ -319,7 +319,7 @@
                                                         <div class="flex items-start">
                                                             <div class="flex items-center h-5">
                                                                 <input id="glasses" name="glasses" type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="glasses"
@@ -330,7 +330,7 @@
                                                         <div class="flex items-start">
                                                             <div class="flex items-center h-5">
                                                                 <input id="gloves" name="gloves" type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="gloves"
@@ -341,7 +341,7 @@
                                                         <div class="flex items-start">
                                                             <div class="flex items-center h-5">
                                                                 <input id="harness" name="harness" type="checkbox"
-                                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                    class="focus:ring-yellow-500 h-4 w-4 text-yellow-600 border-gray-300 rounded">
                                                             </div>
                                                             <div class="ml-3 text-sm">
                                                                 <label for="harness"
@@ -357,7 +357,7 @@
                                                                 </label>
                                                                 <div class="mt-1 flex rounded-md shadow-sm">
                                                                     <input type="text" name="otherPPE" id="otherPPE"
-                                                                        class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
+                                                                        class="focus:ring-yellow-500 focus:border-yellow-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -387,7 +387,7 @@
 
                             <div class="mt-5 md:grid-cols-3">
                                 <button
-                                    class="bg-indigo-400 hover:bg-indigo-500 transition-colors  p-3 rounded text-white font-semibold uppercase"
+                                    class="bg-yellow-400 hover:bg-yellow-500 transition-colors  p-3 rounded text-white font-semibold uppercase"
                                     type="submit">Submit Assessment
                                 </button>
                             </div>
