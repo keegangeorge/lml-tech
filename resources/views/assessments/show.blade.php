@@ -13,29 +13,29 @@
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                             {{-- Main Info --}}
                             <ul
-                                class="bg-gray-50  rounded-lg p-5 md:p-2  pb-5 mb-5 flex md:justify-evenly md:items-center flex-wrap flex-col md:flex-row">
+                                class="bg-blue-50  rounded-lg p-5 md:p-2  pb-5 mb-5 flex md:justify-evenly md:items-center flex-wrap flex-col md:flex-row">
                                 {{-- Assessment Date --}}
-                                <li class="mt-5 md:mb-5 text-2xl font-bold text-gray-800">
+                                <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
                                     <span class="text-gray-400 text-sm font-light uppercase block mb-2">Assessment
                                         Date</span>
                                     {{ date('D F d, Y', strtotime($assessment->date)) }}
                                 </li>
 
                                 {{-- Technician --}}
-                                <li class="mt-5 md:mb-5 text-2xl font-bold text-gray-800">
+                                <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
                                     <span
                                         class="text-gray-400 text-sm font-light uppercase block mb-2">Technician</span>
                                     {{ $assessment->technicianName() }}
                                 </li>
                                 {{-- Supervisor --}}
-                                <li class="mt-5 md:mb-5 text-2xl font-bold text-gray-800">
+                                <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
                                     <span
                                         class="text-gray-400 text-sm font-light uppercase block mb-2">Supervisor</span>
                                     {{ $assessment->supervisor }}
                                 </li>
 
                                 {{-- Weather Conditions --}}
-                                <li class="mt-5 md:mb-5 text-2xl font-bold text-gray-800">
+                                <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
                                     <span class="text-gray-400 text-sm font-light uppercase block mb-2">Weather
                                         Conditions</span>
                                     @switch($assessment->weatherConditions)
@@ -80,7 +80,7 @@
                                 </li>
 
                                 {{-- Work Type --}}
-                                <li class="mt-5 md:mb-5 text-2xl font-bold text-gray-800">
+                                <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
                                     <span class="text-gray-400 text-sm font-light uppercase block mb-2">Work Type</span>
                                     {{ $assessment->workType }}
                                 </li>

@@ -56,7 +56,7 @@
                                                     Conditions</label>
                                                 <select id="weatherConditions" name="weatherConditions"
                                                     autocomplete="weatherConditions"
-                                                    class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                    class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                                                     <option selected>{{ $assessment->weatherConditions }}</option>
                                                     <option>Sunny</option>
                                                     <option>Partially Cloudy</option>
@@ -75,7 +75,7 @@
                                                 <div class="mt-1 flex rounded-md shadow-sm">
                                                     <input value="{{ $assessment->workType }}" type="text"
                                                         name="workType" id="workType"
-                                                        class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
+                                                        class="focus:ring-blue-500 focus:border-blue-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
                                                 </div>
                                             </div>
                                         </div>
@@ -114,11 +114,11 @@
                                                     <div class="flex items-center h-5">
                                                         @if ($assessment->preWorkChecklist->ppeInspected === 1)
                                                             <input id="ppeInspected" name="ppeInspected" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="ppeInspected" name="ppeInspected" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -131,12 +131,12 @@
                                                         @if ($assessment->preWorkChecklist->preUseInspections === 1)
                                                             <input id="preUseInspections" name="preUseInspections"
                                                                 type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="preUseInspections" name="preUseInspections"
                                                                 type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -149,11 +149,11 @@
                                                     <div class="flex items-center h-5">
                                                         @if ($assessment->preWorkChecklist->jobSafety === 1)
                                                             <input id="jobSafety" name="jobSafety" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="jobSafety" name="jobSafety" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -167,12 +167,12 @@
                                                         @if ($assessment->preWorkChecklist->visualInspections === 1)
                                                             <input id="visualInspections" name="visualInspections"
                                                                 type="checkbox" value="1"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="visualInspections" name="visualInspections"
                                                                 type="checkbox" value="1"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -188,12 +188,12 @@
 
                                                             <input id="updatedAssessment" name="updatedAssessment"
                                                                 type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="updatedAssessment" name="updatedAssessment"
                                                                 type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -208,12 +208,12 @@
                                                         @if ($assessment->preWorkChecklist->toolCondition === 1)
                                                             <input id="toolCondition" name="toolCondition"
                                                                 type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="toolCondition" name="toolCondition"
                                                                 type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -226,11 +226,11 @@
                                                     <div class="flex items-center h-5">
                                                         @if ($assessment->preWorkChecklist->controlZones === 1)
                                                             <input id="controlZones" name="controlZones" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="controlZones" name="controlZones" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
 
                                                     </div>
@@ -275,11 +275,11 @@
                                                     <div class="flex items-center h-5">
                                                         @if ($assessment->ppe->boots === 1)
                                                             <input id="boots" name="boots" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="boots" name="boots" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -291,11 +291,11 @@
                                                     <div class="flex items-center h-5">
                                                         @if ($assessment->ppe->vest === 1)
                                                             <input id="vest" name="vest" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="vest" name="vest" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -308,11 +308,11 @@
                                                         @if ($assessment->ppe->hat === 1)
 
                                                             <input id="hat" name="hat" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="hat" name="hat" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -325,11 +325,11 @@
                                                         @if ($assessment->ppe->glasses === 1)
 
                                                             <input id="glasses" name="glasses" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="glasses" name="glasses" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -342,11 +342,11 @@
                                                         @if ($assessment->ppe->gloves === 1)
 
                                                             <input id="gloves" name="gloves" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="gloves" name="gloves" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -359,11 +359,11 @@
                                                         @if ($assessment->ppe->harness === 1)
 
                                                             <input id="harness" name="harness" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
                                                                 checked>
                                                         @else
                                                             <input id="harness" name="harness" type="checkbox"
-                                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
                                                         @endif
                                                     </div>
                                                     <div class="ml-3 text-sm">
@@ -381,7 +381,7 @@
                                                         <div class="mt-1 flex rounded-md shadow-sm">
                                                             <input value="{{ $assessment->ppe->other }}" type="text"
                                                                 name="otherPPE" id="otherPPE"
-                                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
+                                                                class="focus:ring-blue-500 focus:border-blue-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -411,7 +411,7 @@
 
                     <div class="mt-5 md:grid-cols-3">
                         <button
-                            class="bg-indigo-400 hover:bg-indigo-500 transition-colors  p-3 rounded text-white font-semibold uppercase"
+                            class="bg-blue-400 hover:bg-blue-500 transition-colors  p-3 rounded text-white font-semibold uppercase"
                             type="submit">Submit Assessment
                         </button>
                     </div>
