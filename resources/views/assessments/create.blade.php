@@ -47,7 +47,7 @@
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('date')
-                                                                                     border-red-600
+                                                                                                     border-red-600
                                                                  @enderror">
                                                         </div>
 
@@ -74,7 +74,7 @@
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('supervisor')
-                                                                                                                                                border-red-600
+                                                                                                                                                                border-red-600
                                                                  @enderror">
 
                                                         </div>
@@ -96,21 +96,19 @@
                                                             py-2 px-3 border 
                                                             border-gray-300 
                                                             @error('weatherConditions')
-                                                                                                                border-red-600
+                                                                                                                                border-red-600
                                                             @enderror 
                                                             bg-white rounded-md shadow-sm focus:outline-none
                                                             focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm ">
+                                                            <option selected>{{ old('weatherConditions') }}</option>
                                                             <option>Sunny</option>
                                                             <option>Partially Cloudy</option>
                                                             <option>Cloudy</option>
-                                                            <option>Overcast</option>
                                                             <option>Rain</option>
-                                                            <option>Drizzle</option>
                                                             <option>Snow</option>
                                                             <option>Stormy</option>
                                                             <option>Fog</option>
                                                             <option>Hurricanes</option>
-                                                            <option>Sandstorm</option>
                                                         </select>
                                                     </div>
                                                     {{-- Type of Work --}}
@@ -134,7 +132,7 @@
                                                                   rounded-md sm:text-sm
                                                                   border-gray-300
                                                                   @error('workType')
-                                                                                    border-red-600
+                                                                                                    border-red-600
                                                                  @enderror">
                                                         </div>
                                                     </div>

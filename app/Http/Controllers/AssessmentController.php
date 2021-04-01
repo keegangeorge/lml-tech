@@ -166,7 +166,6 @@ class AssessmentController extends Controller
             'supervisor' => 'required',
             'weatherConditions' => 'required',
             'workType' => 'required',
-            'title' => 'required',
         ]);
     }
 }

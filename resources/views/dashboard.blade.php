@@ -10,9 +10,14 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg px-10 py-14">
                 {{-- <x-jet-welcome /> --}}
                 <h2 class="text-lg font-bold mb-10">Welcome {{ Auth::user()->name }}</h2>
-                
-                <ul>
-                    <li><a href="{{ route('assessments.index') }}" class="transition-colors duration-150 p-3 font-bold text-white bg-indigo-400 hover:bg-indigo-300 rounded ">My Assessments</a></li>
+
+                <ul class="md:flex flex-row flex-wrap items-start">
+                    <li><a href="{{ route('assessments.index') }}"
+                            class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-indigo-400 hover:bg-indigo-300 rounded ">My
+                            Assessments</a></li>
+                    <li><a href="{{ route('assessments.create') }}"
+                            class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-gray-400 hover:bg-gray-300 rounded ">New
+                            Assessment</a></li>
                 </ul>
             </div>
         </div>

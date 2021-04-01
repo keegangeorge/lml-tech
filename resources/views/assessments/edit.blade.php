@@ -61,14 +61,11 @@
                                                     <option>Sunny</option>
                                                     <option>Partially Cloudy</option>
                                                     <option>Cloudy</option>
-                                                    <option>Overcast</option>
                                                     <option>Rain</option>
-                                                    <option>Drizzle</option>
                                                     <option>Snow</option>
                                                     <option>Stormy</option>
                                                     <option>Fog</option>
                                                     <option>Hurricanes</option>
-                                                    <option>Sandstorm</option>
                                                 </select>
                                             </div>
                                             <div class="col-span-3 sm:col-span-2">
