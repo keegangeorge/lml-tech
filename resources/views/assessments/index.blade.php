@@ -27,6 +27,11 @@
                                                 <tr
                                                     class="bg-blue-500 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-5 sm:mb-0">
                                                     <th class="p-3 text-left">Date</th>
+
+                                                    @if (Auth::user()->isAdmin == 1)
+                                                        <th class="p-3 text-left">Technician</th>
+                                                    @endif
+
                                                     <th class="p-3 text-left">Supervisor</th>
                                                     <th class="p-3 text-left">Weather</th>
                                                     <th class="p-3 text-left">Work Type</th>
@@ -41,6 +46,14 @@
                                                 <tr class="flex flex-col flex-no wrap sm:table-row mb-5 sm:mb-0">
                                                     <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">
                                                         {{ $assessment->date }}</td>
+
+                                                    @if (Auth::user()->isAdmin == 1)
+                                                        <td
+                                                            class="border-grey-light border hover:bg-gray-100 p-3 truncate">
+                                                            {{ $assessment->technicianName() }}
+                                                        </td>
+                                                    @endif
+
                                                     <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">
                                                         {{ $assessment->supervisor }}</td>
                                                     <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">
