@@ -12,7 +12,12 @@ class AssessmentController extends Controller
     public function index()
     {
         $currentUser = Auth::user()->id;
-        $assessments = Assessment::where('user_id', $currentUser)->orderBy('date', 'DESC')->paginate(10);
+
+        if (Auth::user()->isAdmin == 1) {
+            $assessments = Assessment::orderBy('date', 'DESC')->paginate(10);
+        } else {
+            $assessments = Assessment::where('user_id', $currentUser)->orderBy('date', 'DESC')->paginate(10);
+        }
 
         return view('assessments.index', ['assessments' => $assessments]);
     }

@@ -17,6 +17,7 @@
                                     href="{{ route('assessments.create') }}">New Assessment</a>
                             </div>
 
+
                             <section class="flex items-center justify-center">
                                 <div class="container">
                                     <table
