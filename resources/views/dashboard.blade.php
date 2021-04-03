@@ -13,8 +13,14 @@
 
                 <ul class="md:flex flex-row flex-wrap items-start">
                     <li><a href="{{ route('assessments.index') }}"
-                            class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-blue-500 hover:bg-blue-600 rounded ">My
-                            Assessments</a></li>
+                            class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-blue-500 hover:bg-blue-600 rounded ">
+                            @if (Auth::user()->isAdmin == 1)
+                                Assessments
+                            @else
+                                My Assessments
+                            @endif
+                        </a>
+                    </li>
                     <li><a href="{{ route('assessments.create') }}"
                             class="block  text-center m-1 transition-colors duration-150 p-3 font-bold text-white bg-gray-400 hover:bg-gray-300 rounded ">New
                             Assessment</a></li>
