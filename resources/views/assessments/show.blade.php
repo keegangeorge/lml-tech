@@ -11,6 +11,12 @@
                 <div class="flex flex-col">
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                            <div class="p-2 m-4 bg-gray-100 rounded ml-0 min-w-full text-gray-800">
+                                <a href="{{ route('assessments.index') }}"><i
+                                        class="fas p-4 bg-gray-300 rounded-full mr-2 fa-arrow-left"></i>
+                                    Back
+                                    to assessments</a>
+                            </div>
                             {{-- Main Info --}}
                             <ul
                                 class="bg-blue-50  rounded-lg p-5 md:p-2  pb-5 mb-5 flex md:justify-evenly md:items-center flex-wrap flex-col md:flex-row">

@@ -11,7 +11,7 @@ class AssessmentController extends Controller
 {
     public function index()
     {
-        $assessments = Assessment::orderBy('date', 'DESC')->get();
+        $assessments = Assessment::orderBy('date', 'DESC')->paginate(10);
 
         return view('assessments.index', ['assessments' => $assessments]);
     }
