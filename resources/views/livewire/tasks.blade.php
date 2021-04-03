@@ -1,11 +1,8 @@
 {{-- Tasks --}}
 <div class="md:grid md:grid-cols-3 md:gap-6">
     <div class="md:col-span-1">
-        <div class="px-4 sm:px-0">
-            <h3 class="text-lg font-medium leading-6 text-gray-900">Tasks</h3>
-            <p class="mt-1 text-sm text-gray-600">
-                Lorem ipsum dolor sit amet.
-            </p>
+        <div class="px-4 sm:px-0 mt-10">
+            <h3 class="text-2xl font-medium leading-6 text-gray-900">Tasks</h3>
         </div>
     </div>
     <div class="mt-5 md:mt-0 md:col-span-2">
@@ -63,10 +60,12 @@
                                     class="focus:ring-blue-500 focus:border-blue-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300">
                             </div>
                         </div>
-                        <button class="transition-colors
-                                hover:bg-red-500 hover:text-white text-gray-500 rounded px-3 py-2 bg-gray-200"
-                            wire:click.prevent="removeTask({{ $index }})">Remove
-                            Task</button>
+                        <div class="col-span-3">
+                            <button class="transition-colors
+                                    hover:bg-red-500 hover:text-white text-gray-500 rounded px-3 py-2 bg-gray-200"
+                                wire:click.prevent="removeTask({{ $index }})">Remove
+                                Task</button>
+                        </div>
 
                     </div>
 

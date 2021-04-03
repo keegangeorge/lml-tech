@@ -184,7 +184,7 @@
                                 <h2 class="text-2xl font-bold mb-5">Tasks</h2>
                                 @foreach ($assessment->findTasks() as $taskItem)
                                     <div class="flex flex-wrap justify-start items-center">
-                                        @if (!is_null($taskItem->title) && !is_null($taskItem->hazards) && !is_null($taskItem->riskLevel) && !is_null($taskItem->controls))
+                                        @if (!is_null($taskItem->title))
                                             <ul class="w-screen md:w-auto m-2 rounded-lg p-5 bg-gray-50 text-gray-500">
                                                 <li class="my-3 text-xl text-black"><strong>
                                                         {{ $taskItem->title }}</strong>

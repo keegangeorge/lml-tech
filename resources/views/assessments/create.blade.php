@@ -15,8 +15,8 @@
                             <div>
                                 <div class="md:grid md:grid-cols-3 md:gap-6">
                                     <div class="md:col-span-1">
-                                        <div class="px-4 sm:px-0">
-                                            <h3 class="text-lg font-medium leading-6 text-gray-900">Field Level Hazard
+                                        <div class="px-4 sm:px-0 mt-10">
+                                            <h3 class="text-2xl font-medium leading-6 text-gray-900">Field Level Hazard
                                                 Assessment</h3>
                                             <p class="mt-1 text-sm text-gray-600">
                                                 General Information for the hazard assessment.
@@ -47,7 +47,7 @@
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('date')
-                                                                                                                                                 border-red-600
+                                                                                                                                                                     border-red-600
                                                                  @enderror">
                                                         </div>
 
@@ -74,7 +74,7 @@
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('supervisor')
-                                                                                                                                                                                                            border-red-600
+                                                                                                                                                                                                                                border-red-600
                                                                  @enderror">
 
                                                         </div>
@@ -96,7 +96,7 @@
                                                             py-2 px-3 border 
                                                             border-gray-300 
                                                             @error('weatherConditions')
-                                                                                                                                                                            border-red-600
+                                                                                                                                                                                                border-red-600
                                                             @enderror 
                                                             bg-white rounded-md shadow-sm focus:outline-none
                                                             focus:ring-blue-500 focus:border-blue-500 sm:text-sm ">
@@ -132,7 +132,7 @@
                                                                   rounded-md sm:text-sm
                                                                   border-gray-300
                                                                   @error('workType')
-                                                                                                                                                border-red-600
+                                                                                                                                                                    border-red-600
                                                                  @enderror">
                                                         </div>
                                                     </div>
@@ -153,14 +153,10 @@
 
                             <div class="mt-10 sm:mt-0">
                                 <div class="md:grid md:grid-cols-3 md:gap-6">
-                                    <div class="md:col-span-1">
+                                    <div class="md:col-span-1 mt-10">
                                         <div class="px-4 sm:px-0">
-                                            <h3 class="text-lg font-medium leading-6 text-gray-900">Pre-Work Checklist
+                                            <h3 class="text-2xl font-medium leading-6 text-gray-900">Pre-Work Checklist
                                             </h3>
-                                            <p class="mt-1 text-sm text-gray-600">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-                                                sequi!
-                                            </p>
                                         </div>
                                     </div>
                                     <div class="mt-5 md:mt-0 md:col-span-2">
@@ -270,13 +266,9 @@
                             <div class="mt-10 sm:mt-0">
                                 <div class="md:grid md:grid-cols-3 md:gap-6">
                                     <div class="md:col-span-1">
-                                        <div class="px-4 sm:px-0">
-                                            <h3 class="text-lg font-medium leading-6 text-gray-900">Required PPE
+                                        <div class="px-4 sm:px-0 mt-10">
+                                            <h3 class="text-2xl font-medium leading-6 text-gray-900">Required PPE
                                             </h3>
-                                            <p class="mt-1 text-sm text-gray-600">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-                                                sequi!
-                                            </p>
                                         </div>
                                     </div>
                                     <div class="mt-5 md:mt-0 md:col-span-2">

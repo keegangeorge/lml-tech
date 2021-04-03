@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Assessment;
 use App\Models\Task;
-
+use Illuminate\Support\Facades\Auth;
 
 class AssessmentController extends Controller
 {
     public function index()
     {
-        $assessments = Assessment::orderBy('date', 'DESC')->paginate(10);
+        $currentUser = Auth::user()->id;
+        $assessments = Assessment::where('user_id', $currentUser)->orderBy('date', 'DESC')->paginate(10);
 
         return view('assessments.index', ['assessments' => $assessments]);
     }

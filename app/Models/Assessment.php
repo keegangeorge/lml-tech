@@ -64,11 +64,11 @@ class Assessment extends Model
 
     public function findTasks()
     {
-        $task = $this->tasks()->pluck('id');
+        $task = $this->tasks()->pluck('assessment_id');
         // $friends->push($this->id);
 
-        return Task::whereIn('id', $task)
-            ->orWhere('id', $this->id)
+        return Task::whereIn('assessment_id', $task)
+            ->orWhere('assessment_id', $this->id)
             ->latest()->get();
     }
 
