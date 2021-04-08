@@ -47,10 +47,61 @@
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('date')
-                                                                                                                                                                     border-red-600
+                                                                                                                                                                                                         border-red-600
                                                                  @enderror">
                                                         </div>
+                                                    </div>
 
+                                                    {{-- Job ID --}}
+                                                    <div class="col-span-3 sm:col-span-2">
+                                                        <label for="date"
+                                                            class="block text-sm font-medium text-gray-700">
+                                                            Job ID
+                                                            @error('jobId')
+                                                                <br>
+                                                                <small class="text-red-600">{{ $errors->first('jobId') }}
+                                                                </small>
+
+                                                            @enderror
+                                                        </label>
+                                                        <div class="mt-1 flex rounded-md shadow-sm">
+                                                            <input type="text" value="{{ old('jobId') }}"
+                                                                placeholder="Enter Job ID" name="jobId" id="jobId"
+                                                                class="focus:ring-blue-500 
+                                                                focus:border-blue-500
+                                                                 flex-1 block w-full
+                                                                 rounded-md sm:text-sm
+                                                                 border-gray-300
+                                                                 @error('jobId')
+                                                                                                                                                                                                         border-red-600
+                                                                 @enderror">
+                                                        </div>
+                                                    </div>
+
+                                                    {{-- Job ID --}}
+                                                    <div class="col-span-3 sm:col-span-2">
+                                                        <label for="date"
+                                                            class="block text-sm font-medium text-gray-700">
+                                                            Tech ID
+                                                            @error('techId')
+                                                                <br>
+                                                                <small class="text-red-600">{{ $errors->first('techId') }}
+                                                                </small>
+
+                                                            @enderror
+                                                        </label>
+                                                        <div class="mt-1 flex rounded-md shadow-sm">
+                                                            <input type="text" value="{{ old('techId') }}"
+                                                                placeholder="Enter Tech ID" name="techId" id="techId"
+                                                                class="focus:ring-blue-500 
+                                                                focus:border-blue-500
+                                                                    flex-1 block w-full
+                                                                    rounded-md sm:text-sm
+                                                                    border-gray-300
+                                                                    @error('techId')
+                                                                                                                                                                                                            border-red-600
+                                                                    @enderror">
+                                                        </div>
                                                     </div>
 
                                                     {{-- Supervisor or Manager Name --}}
@@ -67,14 +118,15 @@
                                                             @enderror
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
-                                                            <input type="text" value="{{ old('supervisor') }}"
+                                                            <input placeholder="Enter Supervisor or Manager name"
+                                                                type="text" value="{{ old('supervisor') }}"
                                                                 name="supervisor" id="supervisor" class="focus:ring-blue-500
                                                                 focus:border-blue-500
                                                                  flex-1 block w-full
                                                                  rounded-md sm:text-sm
                                                                  border-gray-300
                                                                  @error('supervisor')
-                                                                                                                                                                                                                                border-red-600
+                                                                                                                                                                                                                                                                    border-red-600
                                                                  @enderror">
 
                                                         </div>
@@ -96,7 +148,7 @@
                                                             py-2 px-3 border 
                                                             border-gray-300 
                                                             @error('weatherConditions')
-                                                                                                                                                                                                border-red-600
+                                                                                                                                                                                                                                    border-red-600
                                                             @enderror 
                                                             bg-white rounded-md shadow-sm focus:outline-none
                                                             focus:ring-blue-500 focus:border-blue-500 sm:text-sm ">
@@ -125,14 +177,15 @@
                                                             @enderror
                                                         </label>
                                                         <div class="mt-1 flex rounded-md shadow-sm">
-                                                            <input type="text" name="workType" id="workType"
+                                                            <input placeholder="Enter the type of work" type="text"
+                                                                name="workType" id="workType"
                                                                 value="{{ old('workType') }}" class="focus:ring-blue-500
                                                                  focus:border-blue-500
                                                                   flex-1 block w-full
                                                                   rounded-md sm:text-sm
                                                                   border-gray-300
                                                                   @error('workType')
-                                                                                                                                                                    border-red-600
+                                                                                                                                                                                                        border-red-600
                                                                  @enderror">
                                                         </div>
                                                     </div>
@@ -339,6 +392,17 @@
                                                                 <label for="harness"
                                                                     class="font-medium text-gray-700">Safety Harness
                                                                     &amp; Lanyard</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex items-start">
+                                                            <div class="flex items-center h-5">
+                                                                <input id="covid" name="covid" type="checkbox"
+                                                                    class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                                                            </div>
+                                                            <div class="ml-3 text-sm">
+                                                                <label for="covid"
+                                                                    class="font-medium text-gray-700">COVID required
+                                                                    mask/gloves/boot cover</label>
                                                             </div>
                                                         </div>
                                                         <div class="flex items-start">

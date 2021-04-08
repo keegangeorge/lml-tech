@@ -22,6 +22,7 @@ class CreateRequiredPPESTable extends Migration
             $table->boolean('glasses');
             $table->boolean('gloves');
             $table->boolean('harness');
+            $table->boolean('covid');
             $table->text('other')->nullable();
             $table->timestamps();
         });

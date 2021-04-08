@@ -27,6 +27,19 @@
                                     {{ date('D F d, Y', strtotime($assessment->date)) }}
                                 </li>
 
+                                {{-- Job ID --}}
+                                <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
+                                    <span class="text-gray-400 text-sm font-light uppercase block mb-2">Job ID</span>
+                                    {{ $assessment->jobId }}
+                                </li>
+
+                                {{-- Tech ID --}}
+                                <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
+                                    <span class="text-gray-400 text-sm font-light uppercase block mb-2">Tech ID</span>
+                                    {{ $assessment->techId }}
+                                </li>
+
+
                                 {{-- Technician --}}
                                 <li class="mt-5 md:mb-5 text-2xl font-bold text-blue-500">
                                     <span
@@ -170,6 +183,11 @@
                                             <li class="text-lg text-gray-500 mb-2"><i
                                                     class="mr-2 fas {{ $ppe->harness ? 'fa-check-circle text-green-400' : 'fa-times-circle text-red-500' }}"></i>
                                                 Safety Harness &amp; Lanyard
+                                            </li>
+
+                                            <li class="text-lg text-gray-500 mb-2"><i
+                                                    class="mr-2 fas {{ $ppe->covid ? 'fa-check-circle text-green-400' : 'fa-times-circle text-red-500' }}"></i>
+                                                COVID required mask/gloves/boot cover
                                             </li>
 
 

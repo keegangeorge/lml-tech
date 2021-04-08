@@ -20,6 +20,8 @@ class CreateAssessmentsTable extends Migration
             $table->string('supervisor');
             $table->string('weatherConditions');
             $table->string('workType');
+            $table->bigInteger('jobId');
+            $table->bigInteger('techId');
             $table->timestamps();
         });
     }

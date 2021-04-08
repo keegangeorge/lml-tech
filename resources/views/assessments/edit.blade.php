@@ -41,6 +41,29 @@
                                             </div>
 
                                             <div class="col-span-3 sm:col-span-2">
+                                                <label for="jobId" class="block text-sm font-medium text-gray-700">
+                                                    Job ID
+                                                </label>
+                                                <div class="mt-1 flex rounded-md shadow-sm">
+                                                    <input type="text" name="jobId" id="jobId"
+                                                        class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300"
+                                                        value="{{ $assessment->jobId }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-span-3 sm:col-span-2">
+                                                <label for="techId" class="block text-sm font-medium text-gray-700">
+                                                    Tech ID
+                                                </label>
+                                                <div class="mt-1 flex rounded-md shadow-sm">
+                                                    <input type="text" name="techId" id="techId"
+                                                        class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full  rounded-md sm:text-sm border-gray-300"
+                                                        value="{{ $assessment->techId }}">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-span-3 sm:col-span-2">
                                                 <label for="supervisor" class="block text-sm font-medium text-gray-700">
                                                     Supervisor or Manager Name
                                                 </label>
@@ -372,6 +395,26 @@
                                                             &amp; Lanyard</label>
                                                     </div>
                                                 </div>
+
+                                                <div class="flex items-start">
+                                                    <div class="flex items-center h-5">
+                                                        @if ($assessment->ppe->covid === 1)
+
+                                                            <input id="covid" name="covid" type="checkbox"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
+                                                                checked>
+                                                        @else
+                                                            <input id="covid" name="covid" type="checkbox"
+                                                                class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                                                        @endif
+                                                    </div>
+                                                    <div class="ml-3 text-sm">
+                                                        <label for="harness" class="font-medium text-gray-700"> COVID
+                                                            requried mask/gloves/boot cover</label>
+                                                    </div>
+                                                </div>
+
+
                                                 <div class="flex items-start">
                                                     <div class="col-span-3 sm:col-span-2">
                                                         <label for="otherPPE"

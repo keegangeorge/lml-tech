@@ -39,6 +39,8 @@ class AssessmentController extends Controller
         $assessment->supervisor = request('supervisor');
         $assessment->weatherConditions = request('weatherConditions');
         $assessment->workType = request('workType');
+        $assessment->jobId = request('jobId');
+        $assessment->techId = request('techId');
 
         $assessment->save();
 
@@ -59,6 +61,7 @@ class AssessmentController extends Controller
             'glasses' => request('glasses') ? 1 : 0,
             'gloves' => request('gloves') ? 1 : 0,
             'harness' => request('harness') ? 1 : 0,
+            'covid' => request('covid') ? 1 : 0,
             'other' => request('otherPPE')
         ]);
 
@@ -96,6 +99,8 @@ class AssessmentController extends Controller
         $assessment->supervisor = request('supervisor');
         $assessment->weatherConditions = request('weatherConditions');
         $assessment->workType = request('workType');
+        $assessment->jobId = request('jobId');
+        $assessment->techId = request('techId');
 
         $assessment->update();
 
@@ -116,6 +121,7 @@ class AssessmentController extends Controller
             'glasses' => request('glasses') ? 1 : 0,
             'gloves' => request('gloves') ? 1 : 0,
             'harness' => request('harness') ? 1 : 0,
+            'covid' => request('covid') ? 1 : 0,
             'other' => request('otherPPE')
         ]);
 
@@ -172,6 +178,8 @@ class AssessmentController extends Controller
             'supervisor' => 'required',
             'weatherConditions' => 'required',
             'workType' => 'required',
+            'jobId' => 'required',
+            'techId' => 'required'
         ]);
     }
 }
